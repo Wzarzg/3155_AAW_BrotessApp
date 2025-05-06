@@ -1,23 +1,19 @@
 package pe.edu.upc.brotessapp.dtos;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import pe.edu.upc.brotessapp.entities.Rol;
 import pe.edu.upc.brotessapp.entities.Zona;
 
 
-
-public class UsuarioDTO {
+public class UsuarioDTO_registro {
 
     private int idUsuario;
 
     private String nombre;
     private String apellido;
-    private Boolean enabled;
     private String username;
-    @JsonIgnore
     private String password;
-
     private Zona zona;
+    private Rol rol;
 
     public int getIdUsuario() {
         return idUsuario;
@@ -41,14 +37,6 @@ public class UsuarioDTO {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public Boolean getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Boolean enabled) {
-        this.enabled = enabled;
     }
 
     public String getUsername() {
@@ -75,4 +63,11 @@ public class UsuarioDTO {
         this.zona = zona;
     }
 
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
 }

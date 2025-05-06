@@ -1,31 +1,58 @@
 package pe.edu.upc.brotessapp.dtos;
 
+
 import pe.edu.upc.brotessapp.entities.TipoEnfermedad;
 import pe.edu.upc.brotessapp.entities.TipoTransmision;
 
 public class EnfermedadDTO {
     private int idEnfermedad;
+
     private String nombre;
+
     private String descripcionEnfermedad;
+
     private TipoTransmision tipoTransmision;
+
     private TipoEnfermedad tipoEnfermedad;
 
-    public int getIdEnfermedad() {return idEnfermedad;}
+    public TipoTransmision getTipoTransmision() {
+        return tipoTransmision;
+    }
 
-    public void setIdEnfermedad(int idEnfermedad) {this.idEnfermedad = idEnfermedad;}
-    public String getNombre() {return nombre;}
+    public void setTipoTransmision(TipoTransmision tipoTransmision) {
+        this.tipoTransmision = tipoTransmision;
+    }
 
-    public void setNombre(String nombre) {this.nombre = nombre;}
+    public int getIdEnfermedad() {
+        return idEnfermedad;
+    }
 
-    public String getDescripcionEnfermedad() {return descripcionEnfermedad;}
+    public void setIdEnfermedad(int idEnfermedad) {
+        this.idEnfermedad = idEnfermedad;
+    }
 
-    public void setDescripcionEnfermedad(String descripcionEnfermedad) {this.descripcionEnfermedad = descripcionEnfermedad;}
+    public String getNombre() {
+        return nombre;
+    }
 
-    public TipoTransmision getTipoTransmision() {return tipoTransmision;}
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
-    public void setTipoTransmision(TipoTransmision tipoTransmision) {this.tipoTransmision = tipoTransmision;}
+    public String getDescripcionEnfermedad() {
+        return descripcionEnfermedad;
+    }
 
-    public TipoEnfermedad getTipoEnfermedad() {return tipoEnfermedad;}
+    public void setDescripcionEnfermedad(String descripcionEnfermedad) {
+        this.descripcionEnfermedad = descripcionEnfermedad;
+    }
 
-    public void setTipoEnfermedad(TipoEnfermedad tipoEnfermedad) {this.tipoEnfermedad = tipoEnfermedad;}
+
+    public TipoEnfermedad getTipoEnfermedad() {
+        return tipoEnfermedad;
+    }
+
+    public void setTipoEnfermedad(TipoEnfermedad tipoEnfermedad) {
+        this.tipoEnfermedad = tipoEnfermedad;
+    }
 }
