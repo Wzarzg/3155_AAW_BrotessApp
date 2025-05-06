@@ -2,39 +2,43 @@ package pe.edu.upc.brotessapp.entities;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "Usuario")
-public class Usuario {
+public class Usuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
 
-    @Column(name = "nombre", nullable = false,length =40)
+    @Column(name = "nombre", nullable = false, length = 40)
     private String nombre;
-    @Column(name = "apellido", nullable = false,length =40)
+    @Column(name = "apellido", nullable = false, length = 40)
     private String apellido;
-    @Column(name = "correoElectronico", nullable = false,length =100)
-    private String correoElectronico;
-    @Column(name = "contrasena", nullable = false,length =50)
-    private String contrasena;
+    private Boolean enabled;
+    @Column(name = "username", nullable = false, length = 200, unique = true)
+    private String username;
+    @Column(name = "password", nullable = false, length = 200)
+    private String password;
 
     @OneToOne
     @JoinColumn(name = "idZona")
     private Zona zona;
 
     @ManyToOne
-    @JoinColumn(name = "idRol")
+    @JoinColumn(name = "rol_id",nullable = false)
     private Rol rol;
 
     public Usuario() {
     }
 
-    public Usuario(int idUsuario, String nombre, String apellido, String correoElectronico, String contrasena, Zona zona, Rol rol) {
+    public Usuario(int idUsuario, String nombre, String apellido, Boolean enabled, String username, String password, Zona zona, Rol rol) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.correoElectronico = correoElectronico;
-        this.contrasena = contrasena;
+        this.enabled = enabled;
+        this.username = username;
+        this.password = password;
         this.zona = zona;
         this.rol = rol;
     }
@@ -63,20 +67,28 @@ public class Usuario {
         this.apellido = apellido;
     }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getUsername() {
+        return username;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Zona getZona() {
@@ -95,3 +107,4 @@ public class Usuario {
         this.rol = rol;
     }
 }
+

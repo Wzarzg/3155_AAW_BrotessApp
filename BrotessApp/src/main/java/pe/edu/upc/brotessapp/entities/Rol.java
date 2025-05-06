@@ -3,6 +3,8 @@ package pe.edu.upc.brotessapp.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "Rol")
 public class Rol {
@@ -11,15 +13,16 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRol;
 
-    @Column(name = "tipoRol",nullable = false, length = 20)
-    private String tipoRol;
+    @Column(name = "rol",nullable = false, length = 20)
+    private String rol;
+
 
     public Rol() {
     }
 
-    public Rol(int idRol, String tipoRol) {
+    public Rol(int idRol, String rol) {
         this.idRol = idRol;
-        this.tipoRol = tipoRol;
+        this.rol = rol;
     }
 
     public int getIdRol() {
@@ -30,11 +33,12 @@ public class Rol {
         this.idRol = idRol;
     }
 
-    public String getTipoRol() {
-        return tipoRol;
+    public String getRol() {
+        return rol;
     }
 
-    public void setTipoRol(String tipoRol) {
-        this.tipoRol = tipoRol;
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 }
+
