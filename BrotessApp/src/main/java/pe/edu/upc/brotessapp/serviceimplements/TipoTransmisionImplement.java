@@ -37,4 +37,9 @@ public class TipoTransmisionImplement implements ITipoTransmisionService {
     public void delete(int id) {
     tR.deleteById(id);
     }
+
+    @Override
+    public List<String[]> ContagiosxTipoTransmision() {
+        return tR.quantityContagioTransmision();
+    }
 }

@@ -22,15 +22,15 @@ public class Enfermedad {
     @ManyToOne
     @JoinColumn(name = "idTipoT")
     private TipoTransmision tipoTransmision;
+    public Enfermedad() {
+    }
 
-    public Enfermedad() {}
-
-    public Enfermedad(TipoTransmision tipoTransmision, TipoEnfermedad tipoEnfermedad, String descripcionEnfermedad, String nombre, int idEnfermedad) {
-        this.tipoTransmision = tipoTransmision;
-        this.tipoEnfermedad = tipoEnfermedad;
-        this.descripcionEnfermedad = descripcionEnfermedad;
-        this.nombre = nombre;
+    public Enfermedad(int idEnfermedad, String nombre, String descripcionEnfermedad, TipoEnfermedad tipoEnfermedad, TipoTransmision tipoTransmision) {
         this.idEnfermedad = idEnfermedad;
+        this.nombre = nombre;
+        this.descripcionEnfermedad = descripcionEnfermedad;
+        this.tipoEnfermedad = tipoEnfermedad;
+        this.tipoTransmision = tipoTransmision;
     }
 
     public int getIdEnfermedad() {
