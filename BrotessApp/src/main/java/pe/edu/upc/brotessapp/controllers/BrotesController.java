@@ -70,6 +70,7 @@ public class BrotesController {
         bS.delete(id);
     }
 
+    //Q_B1DTO
     //CON PARAMETROS
     @GetMapping("/cantidadBrotesTotales")
     @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
