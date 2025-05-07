@@ -9,4 +9,6 @@ public interface IUsuarioService {
     public void insert(Usuario u);
     public Usuario listId(int id);
     public void update(Usuario u);
+    public void delete(int id);
+    public List<String[]> cantidadUsuariosPorZona();
 }
