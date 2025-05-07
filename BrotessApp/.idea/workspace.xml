@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="63d4cb2a-6f2f-489e-b649-80ee1b3439d5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/dtos/EnfermedadPorProvinciaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3155_AAW_BrotessApp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/controllers/EnfermedadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/controllers/EnfermedadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/controllers/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/controllers/JwtAuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/repositories/IEnfermedadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/repositories/IEnfermedadRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/serviceimplements/EnfermedadServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/serviceimplements/EnfermedadServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/serviceinterfaces/IEnfermedadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/serviceinterfaces/IEnfermedadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +129,10 @@
       <workItem from="1745929001346" duration="4901000" />
       <workItem from="1746299316027" duration="3946000" />
       <workItem from="1746570481874" duration="2366000" />
+      <workItem from="1746574354793" duration="113000" />
+      <workItem from="1746592334360" duration="1397000" />
+      <workItem from="1746621891537" duration="25000" />
+      <workItem from="1746621969531" duration="623000" />
     </task>
     <servers />
   </component>
@@ -139,8 +149,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/pe/edu/upc/brotessapp/dtos/EnfermedadDTO.java</url>
-          <line>7</line>
-          <properties field="idEnfermedad" class="pe.edu.upc.brotessapp.dtos.EnfermedadDTO" />
+          <line>9</line>
+          <properties field="nombre" class="pe.edu.upc.brotessapp.dtos.EnfermedadDTO" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

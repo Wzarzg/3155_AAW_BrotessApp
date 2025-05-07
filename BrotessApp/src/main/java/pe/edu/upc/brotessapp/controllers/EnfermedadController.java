@@ -5,7 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.brotessapp.dtos.EnfermedadDTO;
-import pe.edu.upc.brotessapp.dtos.Q_D1DTO;
+import pe.edu.upc.brotessapp.dtos.EnfermedadPorProvinciaDTO;
+
 import pe.edu.upc.brotessapp.dtos.Q_D2DTO;
 import pe.edu.upc.brotessapp.entities.Enfermedad;
 import pe.edu.upc.brotessapp.serviceinterfaces.IEnfermedadService;
@@ -62,14 +63,15 @@ public class EnfermedadController {
     //Q1D
     @GetMapping("/cantidad-enfermedades-provincia")
     @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
-    public List<Q_D1DTO> cantidadEnfermedadesPorProvincia() {
-        List<String[]> data = eS.cantidadEnfermedadesPorProvincia();
-        List<Q_D1DTO> dtoList = new ArrayList<>();
+    public List<EnfermedadPorProvinciaDTO> cantidadEnfermedadesPorProvincia(@RequestParam("provincia") String provincia) {
+        List<String[]> data = eS.cantidadEnfermedadesPorProvincia(provincia);
+        List<EnfermedadPorProvinciaDTO> dtoList = new ArrayList<>();
 
         for (String[] fila : data) {
-            Q_D1DTO dto = new Q_D1DTO();
-            dto.setProvincia(fila[0]);
-            dto.setCantidad(Integer.parseInt(fila[1]));
+            EnfermedadPorProvinciaDTO dto = new EnfermedadPorProvinciaDTO();
+            dto.setProvincia((String) fila[0]);
+            dto.setNombreEnfermedad((String) fila[1]);
+            dto.setCantidadEnfermedades(Long.parseLong((String) fila[2]));
             dtoList.add(dto);
         }
 
@@ -79,7 +81,7 @@ public class EnfermedadController {
     @GetMapping("/cantidad-transmision-provincia/{provincia}")
     @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
     public List<Q_D2DTO> cantidadPorTransmisionProvincia(@PathVariable String provincia) {
-        List<String[]> data = eS.cantidadEnfermedadesPorTransmisionEnProvincia(provincia);
+        List<String[]> data = eS.cantidadEnfermedadesPorProvincia(provincia);
         List<Q_D2DTO> dtoList = new ArrayList<>();
 
         for (String[] fila : data) {

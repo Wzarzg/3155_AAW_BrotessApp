@@ -31,4 +31,18 @@ public class EnfermedadServiceImplement implements IEnfermedadService {
     public void update(Enfermedad e) {
         eR.save(e);
     }
+
+    @Override
+    public void delete(int id) {
+        eR.deleteById(id);
+    }
+
+    @Override
+    public List<String[]> cantidadEnfermedadesPorProvincia(String provincia) {
+        return eR.cantidadEnfermedadesPorProvincia(provincia);
+    }
+    @Override
+    public List<String[]> cantidadEnfermedadesPorTransmisionEnProvincia(String provincia) {
+        return eR.cantidadEnfermedadesPorTransmisionEnProvincia(provincia);
+    }
 }
