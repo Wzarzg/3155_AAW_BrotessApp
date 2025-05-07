@@ -72,6 +72,7 @@ public class ContagiosController {
         }).collect(Collectors.toList());
     }
 
+    //Q_B2DTO
     @GetMapping("/cantidades-Brotes-PorZona")
     @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
     public List<Q_B1DTO> cantidad(){
