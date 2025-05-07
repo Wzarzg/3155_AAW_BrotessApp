@@ -6,6 +6,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.brotessapp.dtos.EnfermedadSintomasEDTO;
 import pe.edu.upc.brotessapp.dtos.Q_M1DTO;
+import pe.edu.upc.brotessapp.dtos.Q_M3DTO;
+import pe.edu.upc.brotessapp.dtos.Q_M4DTO;
 import pe.edu.upc.brotessapp.entities.EnfermedadSintomasE;
 import pe.edu.upc.brotessapp.serviceinterfaces.IEnfermedadSintomasEService;
 
@@ -20,24 +22,24 @@ public class EnfermedadSintomasEController {
     private IEnfermedadSintomasEService eS;
 
     @GetMapping("/lista")
-    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
     public List<EnfermedadSintomasEDTO> listar() {
-        return eS.list().stream().map(u->{
+        return eS.list().stream().map(u -> {
             ModelMapper m = new ModelMapper();
-            return m.map(u,EnfermedadSintomasEDTO.class);
+            return m.map(u, EnfermedadSintomasEDTO.class);
         }).collect(Collectors.toList());
     }
 
     @PostMapping("/inserta")
-    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
     public void insertar(@RequestBody EnfermedadSintomasEDTO dto) {
         ModelMapper m = new ModelMapper();
-        EnfermedadSintomasE u = m.map(dto,EnfermedadSintomasE.class);
+        EnfermedadSintomasE u = m.map(dto, EnfermedadSintomasE.class);
         eS.insert(u);
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
     public EnfermedadSintomasEDTO buscarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         EnfermedadSintomasEDTO dto = m.map(eS.listId(id), EnfermedadSintomasEDTO.class);
@@ -45,7 +47,7 @@ public class EnfermedadSintomasEController {
     }
 
     @PutMapping("/modifica")
-    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
     public void modificar(@RequestBody EnfermedadSintomasEDTO dto) {
         ModelMapper m = new ModelMapper();
         EnfermedadSintomasE u = m.map(dto, EnfermedadSintomasE.class);
@@ -59,12 +61,33 @@ public class EnfermedadSintomasEController {
     }
 
     @GetMapping("/listarSintomasPorEnfermedad")
-    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
     public List<Q_M1DTO> listarSintomasPorEnfermedad() {
         return eS.listarSintomasPorEnfermedad().stream().map(x -> {
             Q_M1DTO dto = new Q_M1DTO();
             dto.setNombreEnfermedad(x[0]);
             dto.setNombreSintoma(x[1]);
+            return dto;
+        }).collect(Collectors.toList());
+    }
+
+    @GetMapping("/sintomas-por-enfermedad/{id}")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
+    public List<Q_M3DTO> listarSintomasPorIdEnfermedad(@PathVariable("id") int id) {
+        return eS.listarSintomasPorIdEnfermedad(id).stream().map(nombreSintoma -> {
+            Q_M3DTO dto = new Q_M3DTO();
+            dto.setNombreSintoma(nombreSintoma);
+            return dto;
+        }).collect(Collectors.toList());
+    }
+
+    // ✅ NUEVO ENDPOINT PARA Q_M4DTO
+    @GetMapping("/sintomas-exclusivos")
+    @PreAuthorize("hasAuthority('AUTORIDAD') or hasAuthority('ADMIN')")
+    public List<Q_M4DTO> listarSintomasExclusivos() {
+        return eS.obtenerSintomasExclusivosPorEnfermedad().stream().map(nombreSintoma -> {
+            Q_M4DTO dto = new Q_M4DTO();
+            dto.setNombreSintoma(nombreSintoma);
             return dto;
         }).collect(Collectors.toList());
     }

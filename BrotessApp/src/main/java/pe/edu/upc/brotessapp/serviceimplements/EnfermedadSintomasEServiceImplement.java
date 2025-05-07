@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class EnfermedadSintomasEServiceImplement implements IEnfermedadSintomasEService {
+
     @Autowired
     private IEnfermedadSintomasERepository eeR;
 
@@ -31,5 +32,20 @@ public class EnfermedadSintomasEServiceImplement implements IEnfermedadSintomasE
     @Override
     public void update(EnfermedadSintomasE u) {
         eeR.save(u);
+    }
+
+    @Override
+    public List<Object[]> obtenerEnfermedadesPorSintomaComun() {
+        return eeR.obtenerEnfermedadesPorSintomaComun();
+    }
+
+    @Override
+    public List<String> listarSintomasPorIdEnfermedad(int idEnfermedad) {
+        return eeR.findSintomasByIdEnfermedad(idEnfermedad);
+    }
+
+    @Override
+    public List<String> obtenerSintomasExclusivosPorEnfermedad() {
+        return eeR.obtenerSintomasExclusivosPorEnfermedad();
     }
 }
