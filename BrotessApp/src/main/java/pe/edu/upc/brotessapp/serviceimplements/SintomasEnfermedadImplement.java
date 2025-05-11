@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.SintomasEnfermedad;
 import pe.edu.upc.brotessapp.repositories.ISintomasEnfermedadRepository;
+import pe.edu.upc.brotessapp.serviceinterfaces.ISintomasEnfermedadService;
 
 import java.util.List;
 

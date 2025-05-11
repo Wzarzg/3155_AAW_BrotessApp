@@ -8,6 +8,7 @@ import pe.edu.upc.brotessapp.entities.Notificacion;
 import pe.edu.upc.brotessapp.repositories.IBrotesRepository;
 import pe.edu.upc.brotessapp.repositories.IContagiosRepository;
 import pe.edu.upc.brotessapp.repositories.INotificacionRepository;
+import pe.edu.upc.brotessapp.serviceinterfaces.IBrotesService;
 
 import java.time.LocalDate;
 import java.util.List;

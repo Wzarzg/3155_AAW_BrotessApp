@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.Prevenciones;
 import pe.edu.upc.brotessapp.repositories.IPrevencionesRepository;
+import pe.edu.upc.brotessapp.serviceinterfaces.IPrevencionesService;
 
 import java.util.List;
 

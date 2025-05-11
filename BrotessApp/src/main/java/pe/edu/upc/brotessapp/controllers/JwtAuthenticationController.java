@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import pe.edu.upc.brotessapp.securities.JwtRequest;
+import pe.edu.upc.brotessapp.securities.JwtResponse;
+import pe.edu.upc.brotessapp.securities.JwtTokenUtil;
+import pe.edu.upc.brotessapp.serviceimplements.JwtUserDetailsService;
 
 
 @RestController

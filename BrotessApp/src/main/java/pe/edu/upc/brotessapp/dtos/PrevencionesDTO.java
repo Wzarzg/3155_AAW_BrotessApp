@@ -1,5 +1,7 @@
 package pe.edu.upc.brotessapp.dtos;
 
+import pe.edu.upc.brotessapp.entities.TipoEnfermedad;
+
 public class PrevencionesDTO {
     private int idPrevencion;
 

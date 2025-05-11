@@ -6,6 +6,11 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.brotessapp.dtos.NotificacionDTO;
+import pe.edu.upc.brotessapp.dtos.NotificacionPerDTO;
+import pe.edu.upc.brotessapp.dtos.Q_W1DTO;
+import pe.edu.upc.brotessapp.entities.Notificacion;
+import pe.edu.upc.brotessapp.serviceinterfaces.INotificacionService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

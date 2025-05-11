@@ -4,6 +4,9 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.brotessapp.dtos.RolDTO;
+import pe.edu.upc.brotessapp.entities.Rol;
+import pe.edu.upc.brotessapp.serviceinterfaces.IRolService;
 
 import java.util.List;
 import java.util.stream.Collectors;

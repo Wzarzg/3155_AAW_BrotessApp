@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.dtos.BrotesAutoDTO;
 import pe.edu.upc.brotessapp.entities.Contagios;
 import pe.edu.upc.brotessapp.repositories.IContagiosRepository;
+import pe.edu.upc.brotessapp.serviceinterfaces.IBrotesService;
+import pe.edu.upc.brotessapp.serviceinterfaces.IContagiosService;
 
 import java.util.List;
 

@@ -4,6 +4,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.brotessapp.dtos.Q_T1DTO;
+import pe.edu.upc.brotessapp.dtos.UsuarioDTO;
+import pe.edu.upc.brotessapp.dtos.UsuarioDTO_registro;
+import pe.edu.upc.brotessapp.entities.Usuario;
+import pe.edu.upc.brotessapp.serviceinterfaces.IRolService;
+import pe.edu.upc.brotessapp.serviceinterfaces.IUsuarioService;
 
 import java.util.List;
 import java.util.stream.Collectors;

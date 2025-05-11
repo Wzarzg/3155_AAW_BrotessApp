@@ -4,6 +4,10 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import pe.edu.upc.brotessapp.dtos.Q_W2DTO;
+import pe.edu.upc.brotessapp.dtos.TipoTransmisionDTO;
+import pe.edu.upc.brotessapp.entities.TipoTransmision;
+import pe.edu.upc.brotessapp.serviceinterfaces.ITipoTransmisionService;
 
 import java.util.ArrayList;
 import java.util.List;

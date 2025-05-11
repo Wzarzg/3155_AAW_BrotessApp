@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 import pe.edu.upc.brotessapp.entities.Rol;
 import pe.edu.upc.brotessapp.entities.Usuario;
 import pe.edu.upc.brotessapp.entities.Zona;
+import pe.edu.upc.brotessapp.repositories.IRolRepository;
+import pe.edu.upc.brotessapp.repositories.IUsuarioRepository;
+import pe.edu.upc.brotessapp.repositories.IZonaRepository;
 
 @Component
 public class fstAdmin implements CommandLineRunner {

@@ -1,6 +1,7 @@
 package pe.edu.upc.brotessapp.dtos;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import pe.edu.upc.brotessapp.entities.Zona;
 
 
 public class UsuarioDTO {
