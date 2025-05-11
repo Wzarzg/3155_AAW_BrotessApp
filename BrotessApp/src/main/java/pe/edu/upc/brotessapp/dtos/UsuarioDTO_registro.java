@@ -1,8 +1,8 @@
 package pe.edu.upc.brotessapp.dtos;
 
+
 import pe.edu.upc.brotessapp.entities.Rol;
 import pe.edu.upc.brotessapp.entities.Zona;
-
 
 public class UsuarioDTO_registro {
 

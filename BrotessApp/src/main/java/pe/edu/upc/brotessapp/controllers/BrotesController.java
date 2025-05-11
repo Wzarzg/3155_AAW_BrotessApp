@@ -9,7 +9,6 @@ import pe.edu.upc.brotessapp.dtos.Q_B2DTO;
 import pe.edu.upc.brotessapp.entities.Brotes;
 import pe.edu.upc.brotessapp.serviceinterfaces.IBrotesService;
 
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

@@ -32,4 +32,27 @@ public class EnfermedadSintomasEServiceImplement implements IEnfermedadSintomasE
     public void update(EnfermedadSintomasE u) {
         eeR.save(u);
     }
+
+    @Override
+    public void delete(int id) {
+        eeR.deleteById(id);
+    }
+
+    @Override
+    public List<String[]> listarSintomasPorEnfermedad() {
+        return eeR.listarSintomasPorEnfermedad();
+    }
+
+    // Q_M3DTO - Implementación para listar enfermedades agrupadas por síntomas comunes
+    @Override
+    public List<Object[]> enfermedadesQueCompartenSintoma() {
+        return eeR.enfermedadesQueCompartenSintoma();
+    }
+
+    // Q_M4DTO - Implementación para retornar enfermedades con su cantidad de síntomas
+    @Override
+    public List<Object[]> cantidadSintomasPorEnfermedad() {
+        return eeR.cantidadSintomasPorEnfermedad();
+    }
+
 }

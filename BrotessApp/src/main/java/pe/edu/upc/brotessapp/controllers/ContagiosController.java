@@ -10,7 +10,6 @@ import pe.edu.upc.brotessapp.dtos.Q_T2DTO;
 import pe.edu.upc.brotessapp.entities.Contagios;
 import pe.edu.upc.brotessapp.serviceinterfaces.IContagiosService;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

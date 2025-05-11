@@ -9,7 +9,6 @@ import pe.edu.upc.brotessapp.dtos.Q_M2DTO;
 import pe.edu.upc.brotessapp.entities.Prevenciones;
 import pe.edu.upc.brotessapp.serviceinterfaces.IPrevencionesService;
 
-
 import java.util.List;
 import java.util.stream.Collectors;
 

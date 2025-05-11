@@ -1,8 +1,5 @@
 package pe.edu.upc.brotessapp.dtos;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import pe.edu.upc.brotessapp.entities.Usuario;
-
 public class RolDTO {
 
     private int idRol;

@@ -10,9 +10,7 @@ import pe.edu.upc.brotessapp.dtos.NotificacionDTO;
 import pe.edu.upc.brotessapp.dtos.NotificacionPerDTO;
 import pe.edu.upc.brotessapp.dtos.Q_W1DTO;
 import pe.edu.upc.brotessapp.entities.Notificacion;
-import pe.edu.upc.brotessapp.entities.Usuario;
 import pe.edu.upc.brotessapp.serviceinterfaces.INotificacionService;
-
 
 import java.time.LocalDate;
 import java.util.ArrayList;

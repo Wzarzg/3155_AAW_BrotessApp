@@ -32,4 +32,14 @@ public class PrevencionesServiceImplement implements IPrevencionesService {
     public void update(Prevenciones u) {
         pR.save(u);
     }
+
+    @Override
+    public void delete(int id) {
+        pR.deleteById(id);
+    }
+
+    @Override
+    public List<String[]> listarPrevencionesPorEnfermedad() {
+        return pR.listarPrevencionesPorEnfermedad();
+    }
 }

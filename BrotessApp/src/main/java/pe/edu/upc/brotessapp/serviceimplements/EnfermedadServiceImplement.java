@@ -7,6 +7,7 @@ import pe.edu.upc.brotessapp.repositories.IEnfermedadRepository;
 import pe.edu.upc.brotessapp.serviceinterfaces.IEnfermedadService;
 
 import java.util.List;
+
 @Service
 public class EnfermedadServiceImplement implements IEnfermedadService {
     @Autowired
@@ -18,8 +19,8 @@ public class EnfermedadServiceImplement implements IEnfermedadService {
     }
 
     @Override
-    public void insert(Enfermedad e) {
-        eR.save(e);
+    public void insert(Enfermedad u) {
+        eR.save(u);
     }
 
     @Override
@@ -28,7 +29,22 @@ public class EnfermedadServiceImplement implements IEnfermedadService {
     }
 
     @Override
-    public void update(Enfermedad e) {
-        eR.save(e);
+    public void update(Enfermedad u) {
+        eR.save(u);
+    }
+
+    @Override
+    public void delete(int id) {
+        eR.deleteById(id);
+    }
+
+    @Override
+    public List<String[]> cantidadEnfermedadesPorProvincia() {
+        return eR.cantidadEnfermedadesPorProvincia();
+    }
+
+    @Override
+    public List<String[]> cantidadEnfermedadesPorTransmisionEnProvincia(String provincia) {
+        return eR.cantidadEnfermedadesPorTransmisionEnProvincia(provincia);
     }
 }
