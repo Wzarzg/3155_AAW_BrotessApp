@@ -6,6 +6,8 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.brotessapp.dtos.EnfermedadSintomasEDTO;
 import pe.edu.upc.brotessapp.dtos.Q_M1DTO;
+import pe.edu.upc.brotessapp.dtos.Q_M3DTO;
+import pe.edu.upc.brotessapp.dtos.Q_M4DTO;
 import pe.edu.upc.brotessapp.entities.EnfermedadSintomasE;
 import pe.edu.upc.brotessapp.serviceinterfaces.IEnfermedadSintomasEService;
 
@@ -68,4 +70,30 @@ public class EnfermedadSintomasEController {
             return dto;
         }).collect(Collectors.toList());
     }
+
+    // Q_M3DTO - Endpoint para obtener síntomas comunes y las enfermedades asociadas a ellos
+    @GetMapping("/enfermedades-por-sintoma")
+    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    public List<Q_M3DTO> listarEnfermedadesPorSintoma() {
+        return eS.enfermedadesQueCompartenSintoma().stream().map(x -> {
+            Q_M3DTO dto = new Q_M3DTO();
+            dto.setNombreSintoma((String) x[0]);
+            dto.setCantidadEnfermedades((Long) x[1]);
+            dto.setEnfermedadesAsociadas((String) x[2]);
+            return dto;
+        }).collect(Collectors.toList());
+    }
+
+    // Q_M4DTO - Endpoint para mostrar enfermedades con el total de síntomas asociados
+    @GetMapping("/enfermedades-con-cantidad-sintomas")
+    @PreAuthorize("hasAuthority('AUTORIDAD')or hasAuthority('ADMIN')")
+    public List<Q_M4DTO> listarCantidadSintomasPorEnfermedad() {
+        return eS.cantidadSintomasPorEnfermedad().stream().map(x -> {
+            Q_M4DTO dto = new Q_M4DTO();
+            dto.setNombreEnfermedad((String) x[0]);
+            dto.setTotalSintomas(((Number) x[1]).intValue());
+            return dto;
+        }).collect(Collectors.toList());
+    }
+
 }

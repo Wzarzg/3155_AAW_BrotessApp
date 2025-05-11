@@ -42,4 +42,17 @@ public class EnfermedadSintomasEServiceImplement implements IEnfermedadSintomasE
     public List<String[]> listarSintomasPorEnfermedad() {
         return eeR.listarSintomasPorEnfermedad();
     }
+
+    // Q_M3DTO - Implementación para listar enfermedades agrupadas por síntomas comunes
+    @Override
+    public List<Object[]> enfermedadesQueCompartenSintoma() {
+        return eeR.enfermedadesQueCompartenSintoma();
+    }
+
+    // Q_M4DTO - Implementación para retornar enfermedades con su cantidad de síntomas
+    @Override
+    public List<Object[]> cantidadSintomasPorEnfermedad() {
+        return eeR.cantidadSintomasPorEnfermedad();
+    }
+
 }
