@@ -1,5 +1,6 @@
 package pe.edu.upc.brotessapp.serviceinterfaces;
 
+
 import pe.edu.upc.brotessapp.entities.Enfermedad;
 
 import java.util.List;
@@ -9,4 +10,7 @@ public interface IEnfermedadService {
     public void insert(Enfermedad e);
     public Enfermedad listId(int id);
     public void update(Enfermedad e);
+    public void delete(int id);
+    List<String[]> cantidadEnfermedadesPorProvincia();
+    List<String[]> cantidadEnfermedadesPorTransmisionEnProvincia(String provincia);
 }

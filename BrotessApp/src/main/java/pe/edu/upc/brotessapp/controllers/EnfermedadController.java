@@ -4,11 +4,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.brotessapp.dtos.EnfermedadDTO;
-import pe.edu.upc.brotessapp.dtos.Q_D1DTO;
-import pe.edu.upc.brotessapp.dtos.Q_D2DTO;
-import pe.edu.upc.brotessapp.entities.Enfermedad;
-import pe.edu.upc.brotessapp.serviceinterfaces.IEnfermedadService;
 
 import java.util.ArrayList;
 import java.util.List;

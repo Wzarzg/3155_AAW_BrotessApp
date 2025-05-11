@@ -5,7 +5,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import pe.edu.upc.brotessapp.entities.Notificacion;
-import pe.edu.upc.brotessapp.entities.Usuario;
 
 import java.util.List;
 

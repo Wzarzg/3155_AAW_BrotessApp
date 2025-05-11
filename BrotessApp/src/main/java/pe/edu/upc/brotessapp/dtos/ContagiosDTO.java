@@ -1,9 +1,5 @@
 package pe.edu.upc.brotessapp.dtos;
 
-import pe.edu.upc.brotessapp.entities.Enfermedad;
-import pe.edu.upc.brotessapp.entities.Usuario;
-import pe.edu.upc.brotessapp.entities.Zona;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 

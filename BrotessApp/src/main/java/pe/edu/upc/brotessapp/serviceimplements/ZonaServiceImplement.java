@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.Zona;
 import pe.edu.upc.brotessapp.repositories.IZonaRepository;
-import pe.edu.upc.brotessapp.serviceinterfaces.IZonaService;
 
 import java.util.List;
 
@@ -37,4 +36,10 @@ public class ZonaServiceImplement implements IZonaService {
     public void delete(int id) {
     zR.deleteById(id);
     }
+
+    @Override
+    public List<Zona> zonasinAsig() {
+        return zR.Zonasinasig();
+    }
+
 }

@@ -4,13 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.EnfermedadSintomasE;
 import pe.edu.upc.brotessapp.repositories.IEnfermedadSintomasERepository;
-import pe.edu.upc.brotessapp.serviceinterfaces.IEnfermedadSintomasEService;
 
 import java.util.List;
 
 @Service
 public class EnfermedadSintomasEServiceImplement implements IEnfermedadSintomasEService {
-
     @Autowired
     private IEnfermedadSintomasERepository eeR;
 
@@ -35,17 +33,12 @@ public class EnfermedadSintomasEServiceImplement implements IEnfermedadSintomasE
     }
 
     @Override
-    public List<Object[]> obtenerEnfermedadesPorSintomaComun() {
-        return eeR.obtenerEnfermedadesPorSintomaComun();
+    public void delete(int id) {
+        eeR.deleteById(id);
     }
 
     @Override
-    public List<String> listarSintomasPorIdEnfermedad(int idEnfermedad) {
-        return eeR.findSintomasByIdEnfermedad(idEnfermedad);
-    }
-
-    @Override
-    public List<String> obtenerSintomasExclusivosPorEnfermedad() {
-        return eeR.obtenerSintomasExclusivosPorEnfermedad();
+    public List<String[]> listarSintomasPorEnfermedad() {
+        return eeR.listarSintomasPorEnfermedad();
     }
 }

@@ -4,12 +4,6 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.upc.brotessapp.dtos.ContagiosDTO;
-import pe.edu.upc.brotessapp.dtos.Q_B1DTO;
-import pe.edu.upc.brotessapp.dtos.Q_T2DTO;
-import pe.edu.upc.brotessapp.entities.Contagios;
-import pe.edu.upc.brotessapp.serviceinterfaces.IContagiosService;
-
 
 import java.util.ArrayList;
 import java.util.List;

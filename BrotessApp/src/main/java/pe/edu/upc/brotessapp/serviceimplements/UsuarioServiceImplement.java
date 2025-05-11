@@ -5,7 +5,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.Usuario;
 import pe.edu.upc.brotessapp.repositories.IUsuarioRepository;
-import pe.edu.upc.brotessapp.serviceinterfaces.IUsuarioService;
 
 import java.util.List;
 

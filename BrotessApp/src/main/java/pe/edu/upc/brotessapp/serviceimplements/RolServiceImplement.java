@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.Rol;
 import pe.edu.upc.brotessapp.repositories.IRolRepository;
-import pe.edu.upc.brotessapp.serviceinterfaces.IRolService;
-
 
 import java.util.List;
 
@@ -38,4 +36,15 @@ public class RolServiceImplement implements IRolService {
     public void delete(int id) {
     rR.deleteById(id);
     }
+
+    @Override
+    public List<Rol> getRolesPermitidos() {
+        return rR.getRolAble();
+    }
+
+    @Override
+    public Integer getidADMIN() {
+        return rR.getidADMIN();
+    }
+
 }

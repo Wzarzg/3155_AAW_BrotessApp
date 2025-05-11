@@ -1,7 +1,5 @@
 package pe.edu.upc.brotessapp.dtos;
 
-import jakarta.persistence.Column;
-
 public class TipoTransmisionDTO {
     private int idTipoT;
     private String transmision;

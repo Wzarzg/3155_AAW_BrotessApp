@@ -1,6 +1,7 @@
 package pe.edu.upc.brotessapp.serviceinterfaces;
 
 import pe.edu.upc.brotessapp.entities.SintomasEnfermedad;
+
 import java.util.List;
 
 public interface ISintomasEnfermedadService {

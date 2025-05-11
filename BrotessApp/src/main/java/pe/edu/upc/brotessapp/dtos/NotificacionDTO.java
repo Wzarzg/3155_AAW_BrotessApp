@@ -1,7 +1,5 @@
 package pe.edu.upc.brotessapp.dtos;
 
-import pe.edu.upc.brotessapp.entities.Brotes;
-
 import java.time.LocalDate;
 
 public class NotificacionDTO {

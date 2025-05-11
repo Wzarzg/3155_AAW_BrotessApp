@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.TipoTransmision;
 import pe.edu.upc.brotessapp.repositories.ITipoTransmisionRepository;
-import pe.edu.upc.brotessapp.serviceinterfaces.ITipoTransmisionService;
 
 import java.util.List;
 

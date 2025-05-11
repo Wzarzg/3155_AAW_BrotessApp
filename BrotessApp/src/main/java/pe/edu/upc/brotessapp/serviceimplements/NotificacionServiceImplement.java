@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pe.edu.upc.brotessapp.entities.Notificacion;
 import pe.edu.upc.brotessapp.repositories.INotificacionRepository;
-import pe.edu.upc.brotessapp.serviceinterfaces.INotificacionService;
-
 
 import java.util.List;
 
